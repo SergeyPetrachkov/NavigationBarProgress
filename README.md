@@ -36,4 +36,4 @@ final class ViewController: UIViewController, INavigationBarProgressContainer {
 
 Result:
 
-![gif](https://imgur.com/86OySqO)
+![gif](https://i.imgur.com/86OySqO.gif)
