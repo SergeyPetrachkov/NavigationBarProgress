@@ -33,7 +33,7 @@ public protocol INavigationBarProgressView: AnyObject {
   func didStopPending()
 }
 
-public class NavigationBarProgressView: UIView, INavigationBarProgressView {
+public class NavigationBarProgressView: UIView {
   let activityIndicator: UIActivityIndicatorView
 
   let titleLabel: UILabel = {
@@ -56,6 +56,7 @@ public class NavigationBarProgressView: UIView, INavigationBarProgressView {
     self.addSubview(self.titleLabel)
   }
 
+  @available(*, unavailable)
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -76,9 +77,12 @@ public class NavigationBarProgressView: UIView, INavigationBarProgressView {
       : (maxWidth - minTextSize.width) / 2
 
     self.titleLabel.frame = CGRect(origin: .init(x: titleX,
-                                                 y: (maxTextSize.height - minTextSize.height)/2), size: minTextSize)
+                                                 y: (maxTextSize.height - minTextSize.height)/2),
+                                   size: minTextSize)
   }
+}
 
+extension NavigationBarProgressView: INavigationBarProgressView {
   public func didStartPending() {
     self.isPending = true
     self.setNeedsLayout()
