@@ -38,4 +38,4 @@ Result:
 
 ![gif](https://i.imgur.com/86OySqO.gif)
 
-[Read more](https://www.notion.so/Activity-indicator-in-UINavigationItem-a49a7435039b452dbce01af9462007c3)
+[Read more](https://www.notion.so/Activity-indicator-in-navigation-bar-tutorial-a49a7435039b452dbce01af9462007c3)
